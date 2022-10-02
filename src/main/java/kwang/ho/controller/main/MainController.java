@@ -6,12 +6,14 @@ import kwang.ho.service.main.MainService;
 import kwang.ho.service.manage.ManageService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.Banner;
+import org.springframework.http.ResponseCookie;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 @Controller
@@ -35,5 +37,17 @@ public class MainController {
         model.addAttribute("best", mainService.selectBestList());
 
         return "index";
+    }
+
+    @RequestMapping("/goShopGuide")
+    public String goShopGuide(HttpServletResponse response) throws Exception {
+        ResponseCookie cookie = ResponseCookie.from("samSiteCookie","sameSiteCookieValue")
+                .domain(".kakao.com")
+                .sameSite("None")
+                .secure(true)
+                .path("goShopGuide")
+                .build();
+        response.addHeader("Set-Cookie", cookie.toString());
+        return "shopGuide";
     }
 }
