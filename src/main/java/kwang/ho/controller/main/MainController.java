@@ -40,14 +40,8 @@ public class MainController {
     }
 
     @RequestMapping("/goShopGuide")
-    public String goShopGuide(HttpServletResponse response) throws Exception {
-        ResponseCookie cookie = ResponseCookie.from("samSiteCookie","sameSiteCookieValue")
-                .domain(".kakao.com")
-                .sameSite("None")
-                .secure(true)
-                .path("goShopGuide")
-                .build();
-        response.addHeader("Set-Cookie", cookie.toString());
+    public String goShopGuide() throws Exception {
+
         return "shopGuide";
     }
 }

@@ -55,16 +55,16 @@
 position:absolute;
 top:10px;
 right:10px;
-overflow:hidden;width:130px;height:30px;margin:0;z-index:1;font-size:12px;font-family:'Malgun Gothic', '맑은 고딕', sans-serif;}
+overflow:hidden;height:30px;margin:0;z-index:1;font-size:12px;font-family:'Malgun Gothic', '맑은 고딕', sans-serif;}
 .custom_typecontrol span {display:block;width:65px;height:30px;float:left;text-align:center;line-height:30px;cursor:pointer;}
-.custom_typecontrol .btn {background:#fff;background:linear-gradient(#fff,  #e6e6e6);}
+.custom_typecontrol .btn {background:#fff;background:linear-gradient(#fff,  #e6e6e6);padding:0;font-size:14px;}
 .custom_typecontrol .btn:hover {background:#f5f5f5;background:linear-gradient(#f5f5f5,#e3e3e3);}
 .custom_typecontrol .btn:active {background:#e6e6e6;background:linear-gradient(#e6e6e6, #fff);}
 .custom_typecontrol .selected_btn {color:#fff;background:#425470;background:linear-gradient(#425470, #5b6d8a);}
 .custom_typecontrol .selected_btn:hover {color:#fff;}
 .custom_zoomcontrol {position:absolute;top:50px;right:10px;width:36px;height:80px;overflow:hidden;z-index:1;background-color:#f5f5f5;}
-.custom_zoomcontrol span {display:block;width:33px;height:40px;text-align:center;cursor:pointer;}
-.custom_zoomcontrol span img {width:15px;height:15px;border:none;}
+.custom_zoomcontrol span {display:block;height:40px;text-align:center;cursor:pointer;}
+.custom_zoomcontrol span img {width:15px;height:15px;border:none;margin-top:8px;}
 .custom_zoomcontrol span:first-child{border-bottom:1px solid #bfbfbf;}
 
 </style>
@@ -139,13 +139,13 @@ overflow:hidden;width:130px;height:30px;margin:0;z-index:1;font-size:12px;font-f
 
         <main class="col-9 py-md-3 pl-md-5 bd-content" role="main">
             <!-- kakao map api start-->
-            <h2 style="text-align:center;">찾아오시는 길</h2>
+            <h2 style="text-align:center;margin-bottom:20px;">찾아오시는 길</h2>
             <div class="map_wrap">
                 <div id="map" style="width:100%;height:350px;"></div>
                 <!-- 지도타입 컨트롤 div 입니다 -->
                 <div class="custom_typecontrol radius_border">
                     <span id="btnRoadmap" class="selected_btn" onclick="setMapType('roadmap')">지도</span>
-                    <span id="btnSkyview" class="btnk" onclick="setMapType('skyview')">스카이뷰</span>
+                    <span id="btnSkyview" class="btn" onclick="setMapType('skyview')">스카이뷰</span>
                 </div>
                 <!-- 지도 확대, 축소 컨트롤 div 입니다 -->
                 <div class="custom_zoomcontrol radius_border">
@@ -156,6 +156,7 @@ overflow:hidden;width:130px;height:30px;margin:0;z-index:1;font-size:12px;font-f
                             alt="축소"></span>
                 </div>
             </div>
+            <!-- kakao map api end-->
             <div class="address" style="text-align:center;margin:20px;">
             <span>
               |주소 : 부산광역시 해운대구 벡스코 &nbsp;&nbsp;&nbsp;
@@ -167,22 +168,20 @@ overflow:hidden;width:130px;height:30px;margin:0;z-index:1;font-size:12px;font-f
               |팩스 : 02-3333-3333
             </span>
             </div>
-            <div class="root_detail" style="background-color:gainsboro;margin:10px">
-                <div style="height:5px;"></div>
-                <p style="font-family:Gulim;">
+            <div class="root_detail" style="background-color:gainsboro;height:115px;">
+                <div style="font-family:Gulim;font-weight:bold;padding:12px;">
                     <img style="width:3%;height:3%;" src="bootstrap/img/bus.png">
                     <span style="color:blue;">일반버스</span>
                     5 36, 38, 39, 40, 100, 115-1, 139, 140, 141, 142, 181번, 좌석버스 239, 302, 302-1, 307, 307-14번, 심야버스
                     302, 307번 이용
-                </p>
-                <p style="font-family:Gulim;">
+                </div>
+                <div style="font-family:Gulim;font-weight:bold;padding:12px;">
                     <img style="width:3%;height:3%;" src="bootstrap/img/subway.png">
                     <span style="color:red;">지하철</span>
                     벡스코역 9번 출구에서 31m
-                </p>
-                <div style="height:1px;"></div>
+                </div>
             </div>
-            <!-- kakao map api end-->
+
         </main>
     </div>
 </div>
