@@ -10,13 +10,7 @@
     <th:block th:replace="/layout/header :: headFragment"></th:block>
 </head>
 <style>
-  .navbar-expand-lg {
-  position: sticky;
-  top: 0;
-  z-index: 1071;
-  min-height: 4rem;
-  box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.1);
-}
+
 .bd-sidebar {
   position: sticky;
   top: 4rem;
@@ -40,15 +34,6 @@
   font-size: 90%;
   cursor:pointer;
 }
-.container-fluid {
-    width:100%;
-    height:100%;
-    position:sticky;
-    overflow: auto;
-    list-style-type: none;
-    padding: 0;
-    margin:  0;
-}
 .map_wrap {position:relative;overflow:hidden;width:100%;height:350px;}
 .radius_border{border:1px solid #919191;border-radius:5px;}
 .custom_typecontrol {
@@ -56,6 +41,7 @@ position:absolute;
 top:10px;
 right:10px;
 overflow:hidden;height:30px;margin:0;z-index:1;font-size:12px;font-family:'Malgun Gothic', '맑은 고딕', sans-serif;}
+
 .custom_typecontrol span {display:block;width:65px;height:30px;float:left;text-align:center;line-height:30px;cursor:pointer;}
 .custom_typecontrol .btn {background:#fff;background:linear-gradient(#fff,  #e6e6e6);padding:0;font-size:14px;}
 .custom_typecontrol .btn:hover {background:#f5f5f5;background:linear-gradient(#f5f5f5,#e3e3e3);}
